@@ -1,0 +1,1 @@
+{"version":3,"sources":["index.css","App.css"],"names":[],"mappings":"AAAA,MACE,YAAa,CACb,WACF,CCHA,KACE,YAAa,CACb,aAAc,CACd,oCACF","file":"main.6c23cb6d.chunk.css","sourcesContent":["#root {\r\n  display: flex;\r\n  width: 100vw;\r\n}\r\n","#app {\r\n  display: grid;\r\n  margin: 0 auto;\r\n  grid-template-columns: 50px 50px 50px;\r\n}\r\n"]}
