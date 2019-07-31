@@ -6,7 +6,7 @@ import Decimal from "./Decimal.js";
 import Clear from "./Clear.js";
 import Delete from "./Delete.js";
 import Display from "./Display.js";
-import "./App.css";
+import "../../../css/App.css";
 
 /* Array containing values for the Numbers components */
 const numBtnVals = [

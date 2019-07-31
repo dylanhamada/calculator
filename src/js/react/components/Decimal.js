@@ -1,5 +1,5 @@
 import React from "react";
-import "./App.css";
+import "../../../css/App.css";
 
 class Decimal extends React.Component {
   constructor(props) {
