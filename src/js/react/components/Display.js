@@ -1,5 +1,12 @@
 import React from "react";
+import { connect } from "react-redux";
 import "../../../css/App.css";
+
+const mapStateToProps = state => {
+  return {
+    display: state.expression
+  };
+};
 
 class Display extends React.Component {
   constructor(props) {
@@ -9,10 +16,10 @@ class Display extends React.Component {
   render() {
     return (
       <div id="display">
-        <span>Display</span>
+        <span>{this.props.display}</span>
       </div>
     );
   }
 }
 
-export default Display;
+export default connect(mapStateToProps)(Display);
