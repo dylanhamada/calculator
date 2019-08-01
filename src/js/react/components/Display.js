@@ -4,19 +4,22 @@ import "../../../css/App.css";
 
 const mapStateToProps = state => {
   return {
-    display: state.expression
+    display: state.currentNum
   };
 };
 
 class Display extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-
   render() {
+    /* Truncates value or expression displayed if too long */
+    let fullDisplay = this.props.display.join("");
+    let truncDisplay =
+      fullDisplay.length > 27
+        ? fullDisplay.slice(fullDisplay.length - 27, fullDisplay.length - 1)
+        : fullDisplay;
+
     return (
       <div id="display">
-        <span>{this.props.display}</span>
+        <span>{truncDisplay}</span>
       </div>
     );
   }
