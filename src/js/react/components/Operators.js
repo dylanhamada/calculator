@@ -7,7 +7,7 @@ class Operator extends React.Component {
   }
 
   render() {
-    return <div>{this.props.text}</div>;
+    return <div id={this.props.id}>{this.props.text}</div>;
   }
 }
 

@@ -35,7 +35,7 @@ class App extends React.Component {
     /* Map the numBtnVals array to generate Numbers components for
     each array element */
     const numBtns = numBtnVals.map(numBtn => {
-      return <Numbers key={numBtn.num} id={numBtn.text} num={numBtn.num} />;
+      return <Numbers key={numBtn.num} id={numBtn.text} val={numBtn.num} />;
     });
 
     /* Map the opBtnVals array to generate Operators components for
