@@ -10,7 +10,7 @@ class Operator extends React.Component {
   }
 
   handleClick() {
-    this.props.addToExpArr();
+    this.props.addToExpArr(this.props.text);
   }
 
   render() {

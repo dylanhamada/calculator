@@ -6,6 +6,7 @@ import Decimal from "./Decimal.js";
 import Clear from "./Clear.js";
 import Delete from "./Delete.js";
 import Display from "./Display.js";
+import DisplayExp from "./DisplayExp.js";
 import "../../../css/App.css";
 
 /* Array containing values for the Numbers components */
@@ -46,6 +47,7 @@ class App extends React.Component {
 
     return (
       <div id="app">
+        <DisplayExp />
         <Display />
         {numBtns}
         {opBtns}

@@ -2,15 +2,20 @@
   display: grid;
   margin: 0 auto;
   grid-template-columns: repeat(4, 100px);
-  grid-template-rows: repeat(6, 100px);
+  grid-template-rows: repeat(7, 100px);
   grid-gap: 5px;
   grid-template-areas:
+    "displayexp displayexp displayexp displayexp"
     "display display display display"
     "clear delete divide multiplication"
     "seven eight nine subtraction"
     "four five six addition"
     "one two three equals"
     "zeronum zeronum decimal equals";
+}
+
+#displayExp {
+  grid-area: displayexp;
 }
 
 #display {

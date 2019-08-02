@@ -14,9 +14,10 @@ export const addDec = () => {
 };
 
 /* Updates store with previous number */
-export const addToExpArr = () => {
+export const addToExpArr = func => {
   return {
-    type: "ADD_EXP_ARR"
+    type: "ADD_EXP_ARR",
+    func: func
   };
 };
 
