@@ -1,3 +1,4 @@
+import reduceReducers from "reduce-reducers";
 import { combineReducers } from "redux";
 
 let defaultState = {
@@ -19,15 +20,15 @@ const numReducer = (state = defaultState, action) => {
         num = [];
       }
 
-      return {
+      return Object.assign({}, state, {
         currentNum: [...num, action.num]
-      };
+      });
     /* Updates store value/expression with a decimal */
     case "ADD_DEC":
       if (!num.includes(".")) {
-        return {
+        return Object.assign({}, state, {
           currentNum: [...num, "."]
-        };
+        });
       }
     default:
       return state;
@@ -36,14 +37,17 @@ const numReducer = (state = defaultState, action) => {
 
 const expArrReducer = (state = defaultState, action) => {
   let num = state.currentNum.join("");
-  let numArr = state.expressionArr;
+  let expArr = state.expressionArr;
 
+  /* Updates store by pushing current number into expressions array,
+  then clearing the current number */
   switch (action.type) {
-    case "ADD_NUM_ARR":
-      return {
-        expressionArr: [...numArr, num],
+    case "ADD_EXP_ARR":
+      console.log(state);
+      return Object.assign({}, state, {
+        expressionArr: [...expArr, num],
         currentNum: [0]
-      };
+      });
     default:
       return state;
   }
@@ -64,4 +68,6 @@ const expArrReducer = (state = defaultState, action) => {
 //   expArr: expArrReducer
 // });
 
-export default numReducer;
+const newReducer = reduceReducers(numReducer, expArrReducer);
+
+export default newReducer;

@@ -14,9 +14,9 @@ export const addDec = () => {
 };
 
 /* Updates store with previous number */
-export const addToNumArr = () => {
+export const addToExpArr = () => {
   return {
-    type: "ADD_NUM_ARR"
+    type: "ADD_EXP_ARR"
   };
 };
 

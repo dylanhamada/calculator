@@ -1,6 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
-import { addOp, addToNumArr } from "../../redux/actions";
+import { addToExpArr } from "../../redux/actions";
 import "../../../css/App.css";
 
 class Operator extends React.Component {
@@ -10,8 +10,7 @@ class Operator extends React.Component {
   }
 
   handleClick() {
-    this.props.addToNumArr();
-    this.props.addOp(this.props.text);
+    this.props.addToExpArr();
   }
 
   render() {
@@ -23,4 +22,7 @@ class Operator extends React.Component {
   }
 }
 
-export default Operator;
+export default connect(
+  null,
+  { addToExpArr }
+)(Operator);
