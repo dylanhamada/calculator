@@ -1,7 +1,8 @@
 import reduceReducers from "reduce-reducers";
 
 import numReducer from "./numReducer";
-import expArrReducer from "./expArrReducer.js";
+import expArrReducer from "./expArrReducer";
+import delReducer from "./delReducer";
 
 export let defaultState = {
   currentNum: [0],
@@ -9,6 +10,6 @@ export let defaultState = {
 };
 
 /* Connects reducers to a flat store/state */
-const rootReducer = reduceReducers(numReducer, expArrReducer);
+const rootReducer = reduceReducers(numReducer, expArrReducer, delReducer);
 
 export default rootReducer;

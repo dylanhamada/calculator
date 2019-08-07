@@ -28,3 +28,10 @@ export const addOp = operator => {
     operator: operator
   };
 };
+
+/* Deletes most recent user-input from store */
+export const delVal = () => {
+  return {
+    type: "DEL_VAL"
+  };
+};
