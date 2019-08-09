@@ -31,7 +31,11 @@ const numReducer = (state = defaultState, action) => {
       if (!num.includes(".")) {
         /* If decimal comes after an operator, currentNum is cleared
         and expressionArr includes a zero before the decimal */
-        if (typeof num[0] === "string") {
+        if (
+          typeof num[0] === "string" ||
+          typeof exp[exp.length - 1] === "string" ||
+          exp.length === 0
+        ) {
           return Object.assign({}, state, {
             currentNum: [0, "."],
             expressionArr: [...exp, 0, "."]
